@@ -1,0 +1,132 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://scene/Coin.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://script/World .gd" type="Script" id=3]
+[ext_resource path="res://enemy.gd" type="Script" id=4]
+[ext_resource path="res://ground_stone_small.png" type="Texture" id=5]
+[ext_resource path="res://ennemy/go_go_go/Walk (3).png" type="Texture" id=6]
+[ext_resource path="res://ennemy/go_go_go/Walk (6).png" type="Texture" id=7]
+[ext_resource path="res://ennemy/go_go_go/Walk (8).png" type="Texture" id=8]
+[ext_resource path="res://ennemy/relax/Idle (9).png" type="Texture" id=9]
+[ext_resource path="res://ennemy/relax/Idle (3).png" type="Texture" id=10]
+[ext_resource path="res://ennemy/relax/Idle (14).png" type="Texture" id=11]
+[ext_resource path="res://ennemy/go_go_go/Walk (10).png" type="Texture" id=12]
+[ext_resource path="res://ennemy/relax/Idle (4).png" type="Texture" id=13]
+[ext_resource path="res://ennemy/relax/Idle (12).png" type="Texture" id=14]
+[ext_resource path="res://ennemy/relax/Idle (13).png" type="Texture" id=15]
+[ext_resource path="res://ennemy/relax/Idle (2).png" type="Texture" id=16]
+[ext_resource path="res://ennemy/go_go_go/Walk (2).png" type="Texture" id=17]
+[ext_resource path="res://ennemy/go_go_go/Walk (9).png" type="Texture" id=18]
+[ext_resource path="res://ennemy/relax/Idle (8).png" type="Texture" id=19]
+[ext_resource path="res://ennemy/go_go_go/Walk (1).png" type="Texture" id=20]
+[ext_resource path="res://ennemy/relax/Idle (5).png" type="Texture" id=21]
+[ext_resource path="res://ennemy/relax/Idle (10).png" type="Texture" id=22]
+[ext_resource path="res://ennemy/go_go_go/Walk (4).png" type="Texture" id=23]
+[ext_resource path="res://ennemy/relax/Idle (6).png" type="Texture" id=24]
+[ext_resource path="res://ennemy/relax/Idle (7).png" type="Texture" id=25]
+[ext_resource path="res://ennemy/relax/Idle (15).png" type="Texture" id=26]
+[ext_resource path="res://ennemy/relax/Idle (1).png" type="Texture" id=27]
+[ext_resource path="res://ennemy/go_go_go/Walk (7).png" type="Texture" id=28]
+[ext_resource path="res://ennemy/go_go_go/Walk (5).png" type="Texture" id=29]
+[ext_resource path="res://ennemy/relax/Idle (11).png" type="Texture" id=30]
+[ext_resource path="res://scene/HUD.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scene/finish.tscn" type="PackedScene" id=32]
+[ext_resource path="res://scene/enemmy.tscn" type="PackedScene" id=33]
+
+[sub_resource type="ConvexPolygonShape2D" id=1]
+points = PoolVector2Array( 171, 97, 14, 85, 0, 0, 192, 0 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "ground_stone_small.png 0"
+0/texture = ExtResource( 5 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 6, 3, 195, 97 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 1 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 1 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 16 ), ExtResource( 10 ), ExtResource( 13 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 9 ), ExtResource( 22 ), ExtResource( 30 ), ExtResource( 14 ), ExtResource( 11 ), ExtResource( 26 ) ],
+"loop": true,
+"name": "idle_e",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 20 ), ExtResource( 17 ), ExtResource( 6 ), ExtResource( 23 ), ExtResource( 29 ), ExtResource( 7 ), ExtResource( 28 ), ExtResource( 8 ), ExtResource( 18 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "walk_e",
+"speed": 20.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 26.4059, 47.2197 )
+
+[node name="Episode-1" type="Node2D"]
+position = Vector2( 2.51984, 2.51987 )
+script = ExtResource( 3 )
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -1, 0 )
+tile_set = SubResource( 2 )
+collision_layer = 2
+format = 1
+tile_data = PoolIntArray( 196619, 0, 0, 196621, 0, 0, 327684, 0, 0, 327686, 0, 0, 589794, 0, 0, 589797, 0, 0, 589800, 0, 0, 589803, 0, 0, 589806, 0, 0, 589809, 0, 0, 589812, 0, 0, 589815, 0, 0, 589818, 0, 0, 589821, 0, 0, 524295, 0, 0, 524305, 0, 0, 589824, 0, 0, 589826, 0, 0, 589828, 0, 0, 589830, 0, 0, 589831, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589840, 0, 0 )
+
+[node name="Finish" parent="." instance=ExtResource( 32 )]
+position = Vector2( 972.2, 229.717 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( -49.3979, 451.502 )
+
+[node name="enemy" type="KinematicBody2D" parent="."]
+position = Vector2( -2.66968, 0 )
+collision_layer = 2147483649
+script = ExtResource( 4 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="enemy"]
+position = Vector2( 695, 477 )
+scale = Vector2( 0.221961, 0.218214 )
+frames = SubResource( 3 )
+animation = "walk_e"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy"]
+position = Vector2( 703.98, 490 )
+shape = SubResource( 4 )
+
+[node name="Coin" parent="." instance=ExtResource( 1 )]
+position = Vector2( 500.435, -85.4035 )
+
+[node name="Coin2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 70.4203, 43.4509 )
+
+[node name="Coin3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 612.808, 290.672 )
+
+[node name="enemmy" parent="." instance=ExtResource( 33 )]
+
+[node name="HUD" parent="." instance=ExtResource( 31 )]
+pause_mode = 2
+layer = 2
+[connection signal="exit_game" from="HUD" to="." method="_on_HUD_exit_game"]
+[connection signal="music_game" from="HUD" to="." method="_on_HUD_music_game"]
+[connection signal="ok_options" from="HUD" to="." method="_on_HUD_ok_options"]
+[connection signal="options_game" from="HUD" to="." method="_on_HUD_options_game"]
+[connection signal="restart_game" from="HUD" to="." method="_on_HUD_restart_game"]
+[connection signal="resume_game" from="HUD" to="." method="_on_HUD_resume_game"]
+[connection signal="sound_game" from="HUD" to="." method="_on_HUD_sound_game"]
+[connection signal="start_game" from="HUD" to="." method="_on_HUD_start_game"]

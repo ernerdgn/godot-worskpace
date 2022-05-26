@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/Throw__001.png-a1825d80bee8a5e2df2910ef52f9d049.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Entities/Throw__001.png"
+dest_files=[ "res://.import/Throw__001.png-a1825d80bee8a5e2df2910ef52f9d049.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

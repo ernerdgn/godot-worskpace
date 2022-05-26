@@ -1,0 +1,37 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://scene/Area2D.gd" type="Script" id=1]
+[ext_resource path="res://ennemy/go_go_go/Walk (5).png" type="Texture" id=3]
+[ext_resource path="res://ennemy/go_go_go/Walk (7).png" type="Texture" id=4]
+[ext_resource path="res://ennemy/go_go_go/Walk (9).png" type="Texture" id=5]
+[ext_resource path="res://ennemy/go_go_go/Walk (2).png" type="Texture" id=6]
+[ext_resource path="res://ennemy/go_go_go/Walk (4).png" type="Texture" id=7]
+[ext_resource path="res://ennemy/go_go_go/Walk (1).png" type="Texture" id=8]
+[ext_resource path="res://ennemy/go_go_go/Walk (6).png" type="Texture" id=9]
+[ext_resource path="res://ennemy/go_go_go/Walk (3).png" type="Texture" id=10]
+[ext_resource path="res://ennemy/go_go_go/Walk (8).png" type="Texture" id=11]
+[ext_resource path="res://ennemy/go_go_go/Walk (10).png" type="Texture" id=12]
+
+
+
+
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 11 ), ExtResource( 5 ), ExtResource( 8 ), ExtResource( 4 ), ExtResource( 6 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 12 ) ],
+"loop": true,
+"name": "default",
+"speed": 20.0
+} ]
+
+[node name="enemmy" type="Area2D"]
+script = ExtResource( 1 )
+
+[node name="orosbux2" type="AnimatedSprite" parent="."]
+position = Vector2( -1447.29, 448.788 )
+scale = Vector2( 0.213028, 0.22897 )
+frames = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -1452.5, 408.503, -1461.51, 415.177, -1464.85, 431.863, -1464.18, 442.875, -1466.85, 447.214, -1465.52, 453.22, -1462.85, 457.892, -1460.84, 463.565, -1461.84, 470.24, -1464.51, 480.918, -1463.18, 488.594, -1467.18, 501.275, -1470.19, 511.62, -1437.15, 512.287, -1438.15, 504.278, -1447.5, 499.94, -1446.49, 492.598, -1444.49, 489.595, -1446.49, 486.591, -1441.82, 485.257, -1438.49, 479.917, -1433.81, 480.585, -1432.14, 484.255, -1429.47, 482.587, -1425.14, 475.579, -1427.14, 471.574, -1431.81, 471.574, -1430.14, 468.571, -1428.14, 460.896, -1421.13, 458.56, -1420.13, 465.901, -1412.46, 448.548, -1416.13, 438.203, -1409.45, 426.857, -1422.13, 408.17 )
+[connection signal="body_entered" from="." to="." method="_on_enemmy_body_entered"]
